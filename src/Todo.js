@@ -6,13 +6,12 @@ import todo from './store/todo';
 const Todo = observer( ()=> {
   return (
     <div>
+      <button onClick={() => todo.fetchTodo()}>get todos</button>
       {todo.todos.map(item => 
         <div key={item.id}>
           <input type="checkbox" checked={item.completed} onChange={() => todo.completeTodo(item.id)}/>
-          {item.title}
-          <button onClick={() => todo.removeTodo(item.id)}>
-            Del
-          </button>
+          id: {item.id} title: {item.title} 
+          <button onClick={() => todo.removeTodo(item.id)}>Del</button>
         </div>
       )}
     </div>

@@ -2,6 +2,7 @@ import { makeAutoObservable} from 'mobx';
 
 class Counter {
   count = 0;
+
   constructor(params) {
     makeAutoObservable(this)
   }
@@ -9,6 +10,7 @@ class Counter {
   increment () {
     this.count++;
   };
+  
   decrement () {
     this.count--;
   };

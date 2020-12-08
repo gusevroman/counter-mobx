@@ -1,10 +1,12 @@
-import { observe } from 'mobx';
-import { Observer } from 'mobx-react-lite';
+// import { observe } from 'mobx';
+// import { Observer } from 'mobx-react-lite';
 import React from 'react';
 import { observer } from 'mobx-react-lite';
+
 import counter from './store/counter';
 
-export const Counter = observer(() => {
+
+const Counter = observer(() => {
 
   return (
     <>
@@ -18,3 +20,6 @@ export const Counter = observer(() => {
     </>
   )
 });
+
+
+export default Counter;
